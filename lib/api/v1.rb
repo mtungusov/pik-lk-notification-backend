@@ -14,13 +14,12 @@ module API
         param :badge, Integer, min: 0, max: 999
         any_of :alert, :badge
 
-        # _token = params[:token][0..127]
-        # _alert = params[:alert][0..511] if params[:alert]
-        # _badge = params[:badge] if params[:badge]
+        args = { token: params[:token][0..127] }
+        args.merge!(alert: params[:alert][0..511]) if params[:alert]
+        args.merge!(badge: params[:badge]) if params[:badge]
 
-        notification = ExtService::Apple.api.notification(token: params[:token][0..127],
-                                                          alert: params[:alert][0..511],
-                                                          badge: params[:badge])
+        notification = ExtService::Apple.api.notification args
+
         r, e = ExtService::Apple.api.push(notification)
 
         result = if e
