@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - 'build/**/*'
+    - 'config/**/*'
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  SupportedStyles:
+    - nested
+    - compact
+
+#Style/ClassVars:
+#  Exclude:
+#    - 'lib/ext_service.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120

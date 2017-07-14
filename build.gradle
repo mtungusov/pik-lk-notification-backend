@@ -1,0 +1,36 @@
+buildscript {
+    repositories { jcenter() }
+
+    dependencies {
+        classpath 'com.github.jruby-gradle:jruby-gradle-plugin:1.4.0'
+        classpath 'com.github.jruby-gradle:jruby-gradle-jar-plugin:1.4.0'
+    }
+}
+
+apply plugin: "com.github.jruby-gradle.base"
+apply plugin: 'com.github.jruby-gradle.jar'
+
+
+configurations {
+    compile.extendsFrom jrubyJar
+    jrubyJar.extendsFrom gems
+}
+
+dependencies {
+    gems 'rubygems:settingslogic:2.0.9'
+    gems 'rubygems:dotenv:2.2.1'
+    gems 'rubygems:houston:2.2.4'
+    gems 'rubygems:puma:3.8.2'
+    gems 'rubygems:rack-contrib:1.4.0'
+    gems 'rubygems:sinatra:1.4.8'
+    gems 'rubygems:sinatra-contrib:1.4.7'
+    gems 'rubygems:sinatra-param:1.4.0'
+    gems 'rubygems:pry:0.10.4'
+}
+
+jrubyJar {
+    // initScript "${projectDir}/config.ru"
+    initScript runnable()
+    from 'config.ru'
+    into('lib') { from 'lib' }
+}

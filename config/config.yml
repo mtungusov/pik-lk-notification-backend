@@ -1,0 +1,10 @@
+---
+defaults: &defaults
+  app_name: "lk-pik-notification-backend"
+  cert_apple: "apns_encr.pem"
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
