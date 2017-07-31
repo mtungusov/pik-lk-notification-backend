@@ -40,12 +40,13 @@ module ExtService::Apple
           e = { status: error_status, token: notification.token }
         end
 
-        # if notification.error
-        #   e = notification.token
-        # else
-        #   r = :success
-        # end
+        if error_status
+          puts "Error: APNS status - #{error_status}"
+          close
+        end
       rescue => error
+        puts "Error: #{error}"
+        close
         return [r, error]
       end
       [r, e]
