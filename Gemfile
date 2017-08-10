@@ -6,6 +6,9 @@ gem 'settingslogic'
 # Apple Push Notification Service
 gem 'houston'
 
+gem 'faraday'
+gem 'faraday_middleware'
+
 gem 'puma', '3.8.2'
 gem 'rack-contrib'
 gem 'sinatra'

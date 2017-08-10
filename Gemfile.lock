@@ -7,6 +7,10 @@ GEM
     commander (4.4.3)
       highline (~> 1.7.2)
     dotenv (2.2.1)
+    faraday (0.12.2)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18-java)
     git-version-bump (0.15.1)
     highline (1.7.8)
@@ -16,6 +20,7 @@ GEM
     json (2.1.0-java)
     method_source (0.8.2)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
@@ -70,6 +75,8 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  faraday
+  faraday_middleware
   houston
   pry
   puma (= 3.8.2)

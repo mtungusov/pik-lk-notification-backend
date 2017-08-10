@@ -19,6 +19,8 @@ configurations {
 dependencies {
     gems 'rubygems:settingslogic:2.0.9'
     gems 'rubygems:dotenv:2.2.1'
+    gems 'rubygems:faraday:0.12.2'
+    gems 'rubygems:faraday_middleware:0.12.2'
     gems 'rubygems:houston:2.2.4'
     gems 'rubygems:puma:3.8.2'
     gems 'rubygems:rack-contrib:1.4.0'
