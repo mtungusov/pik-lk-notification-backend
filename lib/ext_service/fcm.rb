@@ -42,7 +42,7 @@ module ExtService::FCM
       when 200
         _process_response_body resp.body, notification.fetch(:registration_ids)
       else
-        {errors: {response_status: _status}}
+        { errors: {response_status: _status} }
       end
     end
 
