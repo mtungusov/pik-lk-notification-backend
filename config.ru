@@ -15,9 +15,9 @@ require 'lib/ext_service'
 # require 'pry'
 # binding.pry
 
-# gcm = ExtService::GCM.api
-# n = gcm.notification(ids: ["APA91bGms1iKIPdKURo7CAi1bGx4kZ_1EB-8m950An3LPDkvMRkxRKofz7yvuZGvzrFpDl6hjOz5zjNbMA1ue2xfBknnGU-dwkUVC74A-rYHIOdydX2PgDZ4IPdT2C_Gjl6eHq_5c356"], text: "Hello from client!")
-# resp = gcm.push n
+# fcm = ExtService::FCM.api
+# n = fcm.notification(ids: ["333","APA91bGms1iKIPdKURo7CAi1bGx4kZ_1EB-8m950An3LPDkvMRkxRKofz7yvuZGvzrFpDl6hjOz5zjNbMA1ue2xfBknnGU-dwkUVC74A-rYHIOdydX2PgDZ4IPdT2C_Gjl6eHq_5c356", "111", "222"], text: "Hello from client 2!")
+# resp = fcm.push n
 
 # apple = ExtService::Apple.api
 # n = apple.notification(token: '1985FB22936A678CC90D4723E31F3A1F697F02B34E1C2292803F02D7F37158DF',
