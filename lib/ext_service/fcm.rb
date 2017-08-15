@@ -85,7 +85,7 @@ module ExtService::FCM
   end
 
   module_function
-  
+
   def api
     @@gcm ||= FCMClient.new
   end
